@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CWU - Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header class="page bg-white c-black box-shadow">
+        <div class="container">
+            <div class="navbar d-flex justify-between align-center pt-1 pb-1 bg-secondaryss">
+                <div class="logo">
+                    <img src="image/logo-removebg-preview.png" width="100" alt="logo">
+                </div>
+                <div class="theme f-big">
+                    <i id="theme" class="fa-regular fa-moon"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mt-2">
+        <h1 class="f-big">Weather App</h1>
+    </div>
+
+    <div class="main-section mt-2">
+        <div class="small-container">
+            <div class="weather-section grid grid-cols-two">
+                <div class="left-section text-center">
+                    <div class="search-box">
+                        <input class="page search" type="text" id="search" placeholder="e.g. Delhi, Mumbai">
+                        <button class="search-btn" id="searchBtn" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                    <div class="mt-2">
+                        <h2 class="f-normal" id="cityName"></h2>
+                        <p class="f-extrasmall" id="dateTime"></p>
+                    </div>
+                    <div class="mt-2">
+                        <span class="main" id="main">Find your city</span>
+                        <p id="description" class="f-extrasmall mt-1"></p>
+                    </div>
+                    <div>
+                        <div class="icon">
+                            <img id="icon" src="image/search.png" alt="clear sky">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <p id="temp" class="f-extrabig"></p>
+                    </div>
+                    <div class="d-flex f-normal pl-5 pr-5 mt-2 justify-between">
+                        <p id="min"></p>
+                        <p id="max"></p>
+                    </div>
+                    <div class="d-flex f-small mt-2 justify-between">
+                        <p id="sunrise"></p>
+                        <p id="sunset"></p>
+                    </div>
+                </div>
+                <div class="right-section ">
+                    <div class="items-box">
+                        <div class="items bg-white">
+                            <h6>Longitude</h6>
+                            <div class="inner-items">
+                                <p id="longitude"></p>
+                            </div>
+                        </div>
+                        <div class="items bg-white">
+                            <h6>Latitude</h6>
+                            <div class="inner-items">
+                                <p id="latitude"></p>
+                            </div>
+                        </div>
+                        <div class="items bg-white">
+                            <h6>Feel Like</h6>
+                            <div class="inner-items">
+                                <p id="feelLike"></p>
+                            </div>
+                        </div>
+                        <div class="items bg-white">
+                            <h6>Humidity</h6>
+                            <div class="inner-items">
+                                <p id="humidity"></p>
+                            </div>
+                        </div>
+                        <div class="items bg-white">
+                            <h6>Wind</h6>
+                            <div class="inner-items">
+                                <p id="wind"></p>
+                            </div>
+                        </div>
+                        <div class="items bg-white">
+                            <h6>Pressure</h6>
+                            <div class="inner-items">
+                                <p id="pressure"></p>
+                            </div>
+                        </div>
+                        <div class="items bg-white">
+                            <h6>Sea Level</h6>
+                            <div class="inner-items">
+                                <p id="seaLevel"></p>
+                            </div>
+                        </div>
+                        <div class="items bg-white">
+                            <h6>Ground Level</h6>
+                            <div class="inner-items">
+                                <p id="groundLevel"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
