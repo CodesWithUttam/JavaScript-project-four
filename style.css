@@ -1,0 +1,285 @@
+/***** Base Rule *****/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    user-select: none;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+/***** Theme *****/
+
+:root{
+    /***** colors *****/
+    --c-black: #000000;
+    --c-white:#ffffff;
+    --c-primary:#28292A;
+    --c-secondary:#FBFCF8;
+    --c-filter:invert(0%) sepia(10%) saturate(39%) hue-rotate(192deg) brightness(93%) contrast(101%);
+    --s-dark:0px 0px 3px rgba(0,0,0,0.3);
+    --s-light:0px 0px 3px rgba(255,255,255,0.1);
+    --d-dark:drop-shadow(3px 3px 2px rgba(0,0,0,0.5));
+    --d-light:drop-shadow(3px 3px 2px rgba(255,255,255,0.5));
+
+    /***** font size *****/
+    --f-extra-big: 3rem;
+    --f-big:2.2rem;
+    --f-normal:1.8rem;
+    --f-small:1.6rem;
+    --f-extra-small:1.2rem;
+}
+
+/***** Layout *****/
+
+.page{
+    width: 100%;
+}
+
+.container{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.small-container{
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.grid{
+    display: grid;
+}
+
+.grid-cols-two{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.d-flex{
+    display: flex;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
+/***** Re-useable code *****/
+
+/* top margin and padding */
+
+.mt-1{
+    margin-top: 1rem;
+}
+
+.mt-2{
+    margin-top: 2rem;
+}
+
+.mt-3{
+    margin-top: 3rem;
+}
+
+.mt-4{
+    margin-top: 4rem;
+}
+
+.mt-5{
+    margin-top: 5rem;
+}
+
+
+.pl-5{
+    padding-left: 5rem;
+}
+
+.pr-5{
+    padding-right: 5rem;
+}
+
+/* color and background */
+
+
+
+/* font size */
+
+.f-extrabig{
+    font-size: var(--f-extra-big);
+}
+
+.f-big{
+    font-size: var(--f-big);
+}
+
+.f-normal{
+    font-size: var(--f-normal);
+}
+
+.f-small{
+    font-size: var(--f-small);
+}
+
+.f-extrasmall{
+    font-size: var(--f-extra-small);
+}
+
+
+/* font weight */
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: 500;
+}
+
+p{
+    font-weight: 350;
+}
+
+.text-center{
+    text-align: center;
+}
+
+/***** custom css *****/
+
+body{
+    background-color: var(--c-white);
+    color: var(--c-black);
+}
+
+header{
+    padding: 1rem 0;
+    color: var(--c-black);
+    box-shadow: var(--s-dark);
+}
+
+.logo img{
+    filter: var(--c-filter);
+}
+
+.theme{
+    cursor: pointer;
+}
+
+.weather-section{
+    background-color: var(--c-secondary);
+    color: var(--c-black);
+    border-radius: 5px;
+    min-height: 70vh;
+    box-shadow: var(--s-dark);
+}
+
+.left-section,.right-section{
+    padding: 3rem;
+}
+
+.search-box{
+    position: relative;
+}
+
+.search{
+    padding: .5rem 1.5rem;
+    border: 2px solid var(--c-black);
+    font-size: var(--f-small);
+    border-radius:25px;
+    outline: none;
+    color: black;
+    background-color: white;
+}
+
+.search-btn{
+    position: absolute;
+    top: .9rem;
+    right: 1rem;
+    border: none;
+    background: transparent;
+    color: black;
+}
+
+.icon img{
+    filter: var(--d-dark);
+}
+
+.main{
+    padding: .5rem 2rem;
+    font-size: var(--f-extra-small);
+    background-color: var(--c-black);
+    color: var(--c-white);
+    border-radius: 25px;
+}
+
+.items-box{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.items{
+    padding: 1rem;
+    min-width: 12rem;
+    height: 8rem;
+    box-shadow: var(--s-dark);
+    border-radius: 5px;
+}
+
+.items h6{
+    font-size: var(--f-extra-small);
+}
+
+.inner-items{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-items p{
+    padding: .5rem 1rem;
+    font-size: var(--f-big);
+}
+
+@media screen and (max-width: 1200px) {
+    .container{
+        margin: 0 2rem;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    html{
+        font-size: 55%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .small-container{
+        margin: 0 2rem;
+    }
+    .grid-cols-two{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+@media screen and (max-width: 450px) {
+    html{
+        font-size: 50%;
+    }
+}
+
